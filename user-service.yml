@@ -21,6 +21,13 @@ spring:
       mongodb.host: localhost
       mongodb.port: 27017
       mongodb.uri: mongodb://localhost/pctl
+    activemq:
+      broker-url: tcp://DS-FKXNWQ1:61616
+      user-queue: com.ctl.user.queue
+      cart-queue: com.ctl.cart.queue
+      order-queue: com.ctl.order.queue
+      sfaint-queue: com.ctl.sfaint.queue
+      default-queue: com.ctl.default.queue
 
 jwt:
     tokenExpirationTime: 5184000 # Number of minutes
@@ -28,17 +35,6 @@ jwt:
     tokenIssuer: Ctl
     tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
     publicKey: apiclient@ctl.com
-    header: Authorization
-    route:
-      authentication:
-        path: auth
-
-activemq:
-    broker-url: tcp://localhost:61616
-    user: "admin"
-    password: "admin"
-    pooled: false
-    destinationQueue: "com.ctl.queue"
 
 # EUREKA
 eureka:
@@ -46,6 +42,10 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
 
+redis:
+    cacheHost: DS-FKXNWQ1 # Host name
+    cachePort: 6379 # port number
+    cacheExpiration: 300 #Seconds
 
 
 # Disable spring basic authentication security
@@ -64,6 +64,8 @@ eureka:
 # LOGGING
 #logging.level.org.springframework.security: DEBUG
 
+#camel:
+#    configFilePath: camel/camel-binding-config.xml
 ---
 
 spring:
@@ -72,6 +74,13 @@ spring:
     mongodb.host: localhost
     mongodb.port: 27017
     mongodb.uri: mongodb://localhost/pctl
+  activemq:
+    broker-url: tcp://DS-FKXNWQ1:61616
+    user-queue: com.ctl.user.queue
+    cart-queue: com.ctl.cart.queue
+    order-queue: com.ctl.order.queue
+    sfaint-queue: com.ctl.sfaint.queue
+    default-queue: com.ctl.default.queue
 
 jwt:
     tokenExpirationTime: 5184000 # Number of minutes
@@ -79,17 +88,6 @@ jwt:
     tokenIssuer: Ctl
     tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
     publicKey: apiclient@ctl.com
-    header: Authorization
-    route:
-      authentication:
-        path: auth
-
-activemq:
-    broker-url: tcp://localhost:61616
-    user: "admin"
-    password: "admin"
-    pooled: false
-    destinationQueue: "com.ctl.queue"
 
 # EUREKA
 eureka:
@@ -97,6 +95,10 @@ eureka:
     serviceUrl:
       defaultZone: http://discovery-service:8081/eureka/
 
+redis:
+    cacheHost: DS-FKXNWQ1 # Host name
+    cachePort: 6379 # port number
+    cacheExpiration: 300 #Seconds
 
 ---
 
@@ -106,6 +108,13 @@ spring:
     mongodb.host: localhost
     mongodb.port: 27017
     mongodb.uri: mongodb://localhost/pctl
+  activemq:
+    broker-url: tcp://DS-FKXNWQ1:61616
+    user-queue: com.ctl.user.queue
+    cart-queue: com.ctl.cart.queue
+    order-queue: com.ctl.order.queue
+    sfaint-queue: com.ctl.sfaint.queue
+    default-queue: com.ctl.default.queue
 
 jwt:
     tokenExpirationTime: 5184000 # Number of minutes
@@ -114,16 +123,6 @@ jwt:
     tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
     publicKey: apiclient@ctl.com
     header: Authorization
-    route:
-      authentication:
-        path: auth
-
-activemq:
-    broker-url: tcp://localhost:61616
-    user: "admin"
-    password: "admin"
-    pooled: false
-    destinationQueue: "com.ctl.queue"
 
 # EUREKA
 eureka:
@@ -134,3 +133,45 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
 
+redis:
+    cacheHost: DS-FKXNWQ1 # Host name
+    cachePort: 6379 # port number
+    cacheExpiration: 300 #Seconds
+
+---
+
+spring:
+  profiles: cloud
+  data:
+    mongodb.host: ${vcap.services.mongodb.credentials.host}
+    mongodb.port: ${vcap.services.mongodb.credentials.port}
+    mongodb.uri: ${vcap.services.mongodb.credentials.uri}
+  activemq:
+    broker-url: ${vcap.services.activemq.credentials.uri}
+    user-queue: ${vcap.services.activemq.credentials.user.queue}
+    cart-queue: ${vcap.services.activemq.credentials.cart.queue}
+    order-queue: ${vcap.services.activemq.credentials.order.queue}
+    notification-queue: ${vcap.services.activemq.credentials.notification.queue}
+    account-queue: ${vcap.services.activemq.credentials.account.queue}
+    sfaint-queue: ${vcap.services.activemq.credentials.sfaint.queue}
+    default-queue: ${vcap.services.activemq.credentials.default.queue}
+
+eureka:
+  instance:
+    nonSecurePort: 80
+    hostname: ${vcap.services.eureka.credentials.host}
+  client:
+    service-url:
+      defaultZone: ${vcap.services.eureka.credentials.url}
+
+redis:
+    cacheHost: ${vcap.services.redis.credentials.host}
+    cachePort: ${vcap.services.redis.credentials.port}
+    cacheExpiration: 300 #Seconds
+
+jwt:
+    tokenExpirationTime: 2592000 # Number of minutes
+    refreshTokenExpTime: 2592000 # Minutes
+    tokenIssuer: Ctl
+    tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
+    publicKey: apiclient@ctl.com

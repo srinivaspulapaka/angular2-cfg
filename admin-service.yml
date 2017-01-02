@@ -56,3 +56,17 @@ server:
       keyStoreType: PKCS12
       key-password: password
       keyAlias: tomcat
+
+---
+
+spring:
+  profiles: cloud
+
+eureka:
+  instance:
+    nonSecurePort: 80
+    hostname: ${vcap.services.eureka.credentials.host}
+  client:
+    service-url:
+      defaultZone: ${vcap.services.eureka.credentials.url}
+
