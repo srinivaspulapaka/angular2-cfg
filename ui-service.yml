@@ -231,3 +231,9 @@ zuul:
      account-service:
           url: ${vcap.services.config.credentials.zuul.account.url}
 
+order-service:
+  ribbon:
+    DeploymentContextBasedVipAddresses: order-service
+    NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList
+    eureka:
+      enabled: true
