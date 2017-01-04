@@ -146,6 +146,11 @@ spring:
     sfaint-queue: com.ctl.sfaint.queue
     default-queue: com.ctl.default.queue
   cookieName: testCookie
+  service:
+    order-service:
+        url: http://${eureka.instance.hostname}:8088
+    account-service:
+        url: http://${eureka.instance.hostname}:8090
 
 # EUREKA
 eureka:
@@ -176,6 +181,12 @@ zuul:
      account-service:
           url: http://${eureka.instance.hostname}:8090
 
+orderRibbonService:
+  ribbon:
+    DeploymentContextBasedVipAddresses: order-service
+    NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList
+    eureka:
+      enabled: true
 ---
 
 spring:
@@ -192,7 +203,12 @@ spring:
     notification-queue: ${vcap.services.activemq.credentials.notification.queue}
     account-queue: ${vcap.services.activemq.credentials.account.queue}
     sfaint-queue: ${vcap.services.activemq.credentials.sfaint.queue}
-    default-queue: ${vcap.services.activemq.credentials.default.queue}    
+    default-queue: ${vcap.services.activemq.credentials.default.queue}
+  service:
+    order-service:
+        url: ${vcap.services.config.credentials.zuul.order.url}
+    account-service:
+        url: ${vcap.services.config.credentials.zuul.account.url}
 eureka:
   instance:
     nonSecurePort: 80
@@ -230,3 +246,9 @@ zuul:
           url: ${vcap.services.config.credentials.zuul.sfaint.url}
      account-service:
           url: ${vcap.services.config.credentials.zuul.account.url}
+
+orderRibbonService:
+  ribbon:
+    DeploymentContextBasedVipAddresses: order-service
+    eureka:
+      enabled: true
