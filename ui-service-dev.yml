@@ -1,0 +1,53 @@
+# EMBEDDED SERVER CONFIGURATION
+spring:
+  activemq:
+    broker-url: tcp://DS-FKXNWQ1:61616
+    user-queue: com.ctl.user.queue
+    cart-queue: com.ctl.cart.queue
+    order-queue: com.ctl.order.queue
+    notification-queue: com.ctl.notification.queue
+    account-queue: com.ctl.account.queue
+    sfaint-queue: com.ctl.sfaint.queue
+    default-queue: com.ctl.default.queue
+  cookieName: testCookie
+  service:
+    order-service:
+        url: http://${eureka.instance.hostname}:8088
+    account-service:
+        url: http://${eureka.instance.hostname}:8090
+
+# EUREKA
+eureka:
+  instance:
+    hostname: localhost
+    port: 8081
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+
+# ZULL
+zuul:
+  routes:
+     user-service:
+          url: http://${eureka.instance.hostname}:8083
+     product-service:
+          url: http://${eureka.instance.hostname}:8082
+     address-service:
+          url: http://${eureka.instance.hostname}:8085
+     notification-service:
+          url: http://${eureka.instance.hostname}:8086
+     cart-service:
+          url: http://${eureka.instance.hostname}:8087
+     order-service:
+          url: http://${eureka.instance.hostname}:8088
+     sfaint-service:
+          url: http://${eureka.instance.hostname}:8089
+     account-service:
+          url: http://${eureka.instance.hostname}:8090
+
+orderRibbonService:
+  ribbon:
+    DeploymentContextBasedVipAddresses: order-service
+    NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList
+    eureka:
+      enabled: true

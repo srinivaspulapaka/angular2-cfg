@@ -1,0 +1,63 @@
+# EMBEDDED SERVER CONFIGURATION
+spring:
+  data:
+    mongodb.host: ${vcap.services.mongodb.credentials.host}
+    mongodb.port: ${vcap.services.mongodb.credentials.port}
+    mongodb.uri: ${vcap.services.mongodb.credentials.uri}
+  activemq:
+    broker-url: ${vcap.services.activemq.credentials.uri}
+    user-queue: ${vcap.services.activemq.credentials.user.queue}
+    cart-queue: ${vcap.services.activemq.credentials.cart.queue}
+    order-queue: ${vcap.services.activemq.credentials.order.queue}
+    notification-queue: ${vcap.services.activemq.credentials.notification.queue}
+    account-queue: ${vcap.services.activemq.credentials.account.queue}
+    sfaint-queue: ${vcap.services.activemq.credentials.sfaint.queue}
+    default-queue: ${vcap.services.activemq.credentials.default.queue}
+  service:
+    order-service:
+        url: ${vcap.services.config.credentials.zuul.order.url}
+    account-service:
+        url: ${vcap.services.config.credentials.zuul.account.url}
+eureka:
+  instance:
+    nonSecurePort: 80
+    hostname: ${vcap.services.eureka.credentials.host}
+  client:
+    service-url:
+      defaultZone: ${vcap.services.eureka.credentials.url}
+redis:
+    cacheHost: ${vcap.services.redis.credentials.host}
+    cachePort: ${vcap.services.redis.credentials.port}
+    cacheExpiration: 300 #Seconds
+jwt:
+    tokenExpirationTime: 2592000 # Number of minutes
+    refreshTokenExpTime: 2592000 # Minutes
+    tokenIssuer: Ctl
+    tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
+    publicKey: apiclient@ctl.com
+
+# ZULL
+zuul:
+  routes:
+     product-service:
+          url: ${vcap.services.config.credentials.zuul.product.url}
+     address-service:
+          url: ${vcap.services.config.credentials.zuul.address.url}
+     notification-service:
+          url: ${vcap.services.config.credentials.zuul.notification.url}
+     user-service:
+          url: ${vcap.services.config.credentials.zuul.user.url}
+     cart-service:
+          url: ${vcap.services.config.credentials.zuul.cart.url}
+     order-service:
+          url: ${vcap.services.config.credentials.zuul.order.url}
+     sfaint-service:
+          url: ${vcap.services.config.credentials.zuul.sfaint.url}
+     account-service:
+          url: ${vcap.services.config.credentials.zuul.account.url}
+
+orderRibbonService:
+  ribbon:
+    DeploymentContextBasedVipAddresses: order-service
+    eureka:
+      enabled: true
