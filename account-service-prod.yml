@@ -31,6 +31,6 @@ jwt:
     tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
     publicKey: apiclient@ctl.com
 camel:
-    configFilePath: camel/camel-binding-cloud1-config.xml
+    configFilePath: camel/camel-binding-cloud-config.xml
 account:
     adminRealm:EMPLOYEE
