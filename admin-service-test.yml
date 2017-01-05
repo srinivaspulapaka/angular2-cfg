@@ -1,0 +1,8 @@
+# EMBEDDED SERVER CONFIGURATION
+eureka:
+  instance:
+    nonSecurePort: 80
+    hostname: ${vcap.services.eureka.credentials.host}
+  client:
+    service-url:
+      defaultZone: ${vcap.services.eureka.credentials.url}
