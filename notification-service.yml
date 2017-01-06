@@ -76,21 +76,21 @@ spring:
     mongodb.host: localhost
     mongodb.port: 27017
     mongodb.uri: mongodb://localhost/pctl
-    mail:
-      host: localhost
-      port: 25
-      username: d4c84030201b3b
-      password: 96eb7582df3e1b
-      smtp:
-         auth: false
-      properties:
-        mail:
-          smtp:
-            auth: true
-            starttls:
-              enable: false
-              required: false
-    activemq:
+  mail:
+    host: ${vcap.services.mail.credentials.host}
+    port: ${vcap.services.mail.credentials.port}
+    username: ${vcap.services.mail.credentials.username}
+    password: ${vcap.services.mail.credentials.password}
+    properties:
+      mail:
+        smtp:
+          auth: false
+          ssl:
+            enable: true
+          starttls:
+            enable: false
+            required: false
+activemq:
       broker-url: tcp://DS-FKXNWQ1:61616
       user-queue: com.ctl.user.queue
       cart-queue: com.ctl.cart.queue
@@ -183,20 +183,20 @@ spring:
     mongodb.host: ${vcap.services.mongodb.credentials.host}
     mongodb.port: ${vcap.services.mongodb.credentials.port}
     mongodb.uri: ${vcap.services.mongodb.credentials.uri}
-    mail:
-      host: ${vcap.services.mail.credentials.host}
-      port: ${vcap.services.mail.credentials.port}
-      username: ${vcap.services.mail.credentials.username}
-      password: ${vcap.services.mail.credentials.password}
-      properties:
-        mail:
-          smtp:
-            auth: false
-            ssl:
-              enable: true
-            starttls:
-              enable: false
-              required: false
+  mail:
+    host: ${vcap.services.mail.credentials.host}
+    port: ${vcap.services.mail.credentials.port}
+    username: ${vcap.services.mail.credentials.username}
+    password: ${vcap.services.mail.credentials.password}
+    properties:
+      mail:
+        smtp:
+          auth: false
+          ssl:
+            enable: true
+          starttls:
+            enable: false
+            required: false
   activemq:
     broker-url: ${vcap.services.activemq.credentials.uri}
     user-queue: ${vcap.services.activemq.credentials.user.queue}
