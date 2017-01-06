@@ -90,6 +90,16 @@ zuul:
           stripPrefix: true
   add-proxy-headers: true
 
+# Disable Hystrix timeout globally (for all services)
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+        isolation:
+          thread:
+            timeoutInMilliseconds: 300000
 ---
 
 spring:
@@ -132,6 +142,17 @@ zuul:
           url: http://${eureka.instance.hostname}:8089
      account-service:
           url: http://${eureka.instance.hostname}:8090
+
+# Disable Hystrix timeout globally (for all services)
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+        isolation:
+          thread:
+            timeoutInMilliseconds: 300000
 ---
 
 spring:
@@ -163,23 +184,36 @@ eureka:
 
 # ZULL
 zuul:
+  host:
+      socket-timeout-millis: 300000
   routes:
-     user-service:
+      user-service:
           url: http://${eureka.instance.hostname}:8083
-     product-service:
+      product-service:
           url: http://${eureka.instance.hostname}:8082
-     address-service:
+      address-service:
           url: http://${eureka.instance.hostname}:8085
-     notification-service:
+      notification-service:
           url: http://${eureka.instance.hostname}:8086
-     cart-service:
+      cart-service:
           url: http://${eureka.instance.hostname}:8087
-     order-service:
+      order-service:
           url: http://${eureka.instance.hostname}:8088
-     sfaint-service:
+      sfaint-service:
           url: http://${eureka.instance.hostname}:8089
-     account-service:
+      account-service:
           url: http://${eureka.instance.hostname}:8090
+
+# Disable Hystrix timeout globally (for all services)
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+        isolation:
+          thread:
+            timeoutInMilliseconds: 300000
 
 orderRibbonService:
   ribbon:
@@ -187,6 +221,8 @@ orderRibbonService:
     NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList
     eureka:
       enabled: true
+
+
 ---
 
 spring:
@@ -229,22 +265,24 @@ jwt:
 
 # ZULL
 zuul:
+  host:
+      socket-timeout-millis: 300000
   routes:
-     product-service:
+      product-service:
           url: ${vcap.services.config.credentials.zuul.product.url}
-     address-service:
+      address-service:
           url: ${vcap.services.config.credentials.zuul.address.url}
-     notification-service:
+      notification-service:
           url: ${vcap.services.config.credentials.zuul.notification.url}
-     user-service:
+      user-service:
           url: ${vcap.services.config.credentials.zuul.user.url}
-     cart-service:
+      cart-service:
           url: ${vcap.services.config.credentials.zuul.cart.url}
-     order-service:
+      order-service:
           url: ${vcap.services.config.credentials.zuul.order.url}
-     sfaint-service:
+      sfaint-service:
           url: ${vcap.services.config.credentials.zuul.sfaint.url}
-     account-service:
+      account-service:
           url: ${vcap.services.config.credentials.zuul.account.url}
 
 orderRibbonService:
@@ -252,14 +290,3 @@ orderRibbonService:
     DeploymentContextBasedVipAddresses: order-service
     eureka:
       enabled: true
-
-# Disable Hystrix timeout globally (for all services)
-hystrix: 
-  command: 
-    default:  
-      execution:  
-        timeout:  
-          enabled: false
-        isolation:
-          thread:
-            timeoutInMilliseconds: 300000

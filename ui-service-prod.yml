@@ -38,22 +38,24 @@ jwt:
 
 # ZULL
 zuul:
+  host:
+      socket-timeout-millis: 300000
   routes:
-     product-service:
+      product-service:
           url: ${vcap.services.config.credentials.zuul.product.url}
-     address-service:
+      address-service:
           url: ${vcap.services.config.credentials.zuul.address.url}
-     notification-service:
+      notification-service:
           url: ${vcap.services.config.credentials.zuul.notification.url}
-     user-service:
+      user-service:
           url: ${vcap.services.config.credentials.zuul.user.url}
-     cart-service:
+      cart-service:
           url: ${vcap.services.config.credentials.zuul.cart.url}
-     order-service:
+      order-service:
           url: ${vcap.services.config.credentials.zuul.order.url}
-     sfaint-service:
+      sfaint-service:
           url: ${vcap.services.config.credentials.zuul.sfaint.url}
-     account-service:
+      account-service:
           url: ${vcap.services.config.credentials.zuul.account.url}
 
 orderRibbonService:
