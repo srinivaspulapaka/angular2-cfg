@@ -29,12 +29,12 @@ spring:
       properties:
         mail:
           smtp:
-            auth: false
+            auth: true
             ssl:
               enable: true
             starttls:
-              enable: false
-              required: false
+              enable: true
+              required: true
     activemq:
       broker-url: tcp://DS-FKXNWQ1:61616
       user-queue: com.ctl.user.queue
