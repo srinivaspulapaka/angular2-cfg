@@ -4,20 +4,20 @@ spring:
     mongodb.host: ${vcap.services.mongodb.credentials.host}
     mongodb.port: ${vcap.services.mongodb.credentials.port}
     mongodb.uri: ${vcap.services.mongodb.credentials.uri}
-    mail:
-      host: ${vcap.services.mail.credentials.host}
-      port: ${vcap.services.mail.credentials.port}
-      username: ${vcap.services.mail.credentials.username}
-      password: ${vcap.services.mail.credentials.password}
-      properties:
-        mail:
-          smtp:
-            auth: false
-            ssl:
-              enable: true
-            starttls:
-              enable: false
-              required: false
+  mail:
+    host: ${vcap.services.mail.credentials.host}
+    port: ${vcap.services.mail.credentials.port}
+    username: ${vcap.services.mail.credentials.username}
+    password: ${vcap.services.mail.credentials.password}
+    properties:
+      mail:
+        smtp:
+          auth: false
+          ssl:
+            enable: true
+          starttls:
+            enable: false
+            required: false
   activemq:
     broker-url: ${vcap.services.activemq.credentials.uri}
     user-queue: ${vcap.services.activemq.credentials.user.queue}
