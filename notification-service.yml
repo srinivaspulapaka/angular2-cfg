@@ -31,10 +31,10 @@ spring:
           smtp:
             auth: true
             ssl:
-              enable: false
+              enable: true
             starttls:
-              enable: false
-              required: false
+              enable: true
+              required: true
     activemq:
       broker-url: tcp://DS-FKXNWQ1:61616
       user-queue: com.ctl.user.queue
