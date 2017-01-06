@@ -34,7 +34,8 @@ spring:
               enable: true
             starttls:
               enable: false
-              required: false    activemq:
+              required: false
+    activemq:
       broker-url: tcp://DS-FKXNWQ1:61616
       user-queue: com.ctl.user.queue
       cart-queue: com.ctl.cart.queue
