@@ -180,7 +180,7 @@ spring:
 eureka:
   instance:
     nonSecurePort: 80
-    hostname: ${vcap.services.eureka.credentials.host}
+    hostname: ${vcap.application.uris[0]}
   client:
     service-url:
       defaultZone: ${vcap.services.eureka.credentials.url}
