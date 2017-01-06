@@ -252,3 +252,14 @@ orderRibbonService:
     DeploymentContextBasedVipAddresses: order-service
     eureka:
       enabled: true
+
+# Disable Hystrix timeout globally (for all services)
+hystrix: 
+  command: 
+    default:  
+      execution:  
+        timeout:  
+          enabled: false
+        isolation:
+          thread:
+            timeoutInMilliseconds: 300000
