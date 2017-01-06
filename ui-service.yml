@@ -210,9 +210,6 @@ spring:
     account-service:
         url: ${vcap.services.config.credentials.zuul.account.url}
 eureka:
-  instance:
-    nonSecurePort: 80
-    hostname: ${vcap.services.eureka.credentials.host}
   client:
     service-url:
       defaultZone: ${vcap.services.eureka.credentials.url}
