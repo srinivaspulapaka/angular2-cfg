@@ -37,3 +37,6 @@ eureka:
 
 camel:
     configFilePath: camel/camel-binding-config.xml
+
+order:
+    restUrl: http://qtomavmdt362.dev.qintra.com:7003/PoimOrderFlow/PoimService/RestServiceforPortal/processPortalOrder

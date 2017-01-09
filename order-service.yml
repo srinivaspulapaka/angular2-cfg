@@ -30,6 +30,12 @@ spring:
       notification-queue: com.ctl.notification.queue
       account-queue: com.ctl.account.queue
       default-queue: com.ctl.default.queue
+    service:
+        product-service:
+            url: http://${eureka.instance.hostname}:8082
+
+
+
 jwt:
     tokenExpirationTime: 2592000 # Number of minutes
     refreshTokenExpTime: 2592000 # Minutes
@@ -52,8 +58,8 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
 
-
-
+order:
+    restUrl: http://qtomavmdt362.dev.qintra.com:7003/PoimOrderFlow/PoimService/RestServiceforPortal/processPortalOrder
 
 ---
 
@@ -135,6 +141,9 @@ eureka:
 
 camel:
     configFilePath: camel/camel-binding-config.xml
+
+order:
+    restUrl: http://qtomavmdt362.dev.qintra.com:7003/PoimOrderFlow/PoimService/RestServiceforPortal/processPortalOrder
 ---
 
 spring:
@@ -152,6 +161,10 @@ spring:
     account-queue: ${vcap.services.activemq.credentials.account.queue}
     sfaint-queue: ${vcap.services.activemq.credentials.sfaint.queue}
     default-queue: ${vcap.services.activemq.credentials.default.queue}
+  service:
+    product-service:
+        url: ${vcap.services.config.credentials.zuul.product.url}
+
 
 eureka:
   instance:
@@ -175,3 +188,6 @@ jwt:
     tokenIssuer: Ctl
     tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
     publicKey: apiclient@ctl.com
+
+order:
+    restUrl: http://qtomavmdt362.dev.qintra.com:7003/PoimOrderFlow/PoimService/RestServiceforPortal/processPortalOrder
