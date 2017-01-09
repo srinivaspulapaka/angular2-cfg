@@ -31,11 +31,9 @@ spring:
       account-queue: com.ctl.account.queue
       default-queue: com.ctl.default.queue
     service:
-        product-service:
-            url: http://${eureka.instance.hostname}:8082
-
-
-
+      product-service:
+          url: ${vcap.services.config.credentials.zuul.product.url} 
+      
 jwt:
     tokenExpirationTime: 2592000 # Number of minutes
     refreshTokenExpTime: 2592000 # Minutes
