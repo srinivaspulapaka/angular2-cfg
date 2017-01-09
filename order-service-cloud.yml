@@ -13,7 +13,9 @@ spring:
     account-queue: ${vcap.services.activemq.credentials.account.queue}
     sfaint-queue: ${vcap.services.activemq.credentials.sfaint.queue}
     default-queue: ${vcap.services.activemq.credentials.default.queue}
-
+  service:
+    product-service:
+        url: ${vcap.services.config.credentials.zuul.product.url} 
 eureka:
   instance:
     nonSecurePort: 80
