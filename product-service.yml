@@ -144,6 +144,8 @@ server:
 spring:
   profiles: cloud
   data:
+    mongodb.host: ${vcap.services.mongodb.credentials.host}
+    mongodb.port: ${vcap.services.mongodb.credentials.port}
     mongodb.uri: ${vcap.services.mongodb.credentials.uri}
 eureka:
   instance:
