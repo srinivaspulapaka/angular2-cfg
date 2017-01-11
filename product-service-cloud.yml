@@ -1,9 +1,9 @@
 # EMBEDDED SERVER CONFIGURATION
 spring:
   data:
-    mongodb.host: ${vcap.services.mongodb.credentials.host}
-    mongodb.port: ${vcap.services.mongodb.credentials.port}
-    mongodb.uri: ${vcap.services.mongodb.credentials.uri}
+    mongodb.host: ${vcap.services.mongodb_ctl.credentials.host}
+    mongodb.port: ${vcap.services.mongodb_ctl.credentials.port}
+    mongodb.uri: ${vcap.services.mongodb_ctl.credentials.uri}
 eureka:
   instance:
     nonSecurePort: 80
