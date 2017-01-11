@@ -1,8 +1,8 @@
 # EMBEDDED SERVER CONFIGURATION
 spring:
   data:
-    mongodb.host: ${vcap.services.mongodb.credentials.host}
-    mongodb.port: ${vcap.services.mongodb.credentials.port}
+    #mongodb.host: ${vcap.services.mongodb.credentials.host}
+    #mongodb.port: ${vcap.services.mongodb.credentials.port}
     mongodb.uri: ${vcap.services.mongodb.credentials.uri}
   activemq:
     broker-url: ${vcap.services.activemq.credentials.uri}
@@ -13,7 +13,7 @@ spring:
     account-queue: ${vcap.services.activemq.credentials.account.queue}
     sfaint-queue: ${vcap.services.activemq.credentials.sfaint.queue}
     default-queue: ${vcap.services.activemq.credentials.default.queue}
-    
+
 eureka:
   instance:
     nonSecurePort: 80
