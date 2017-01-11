@@ -144,12 +144,7 @@ server:
 spring:
   profiles: cloud
   data:
-    mongodb.host: ${vcap.services.mongodb.credentials.host}
-    mongodb.port: ${vcap.services.mongodb.credentials.port}
     mongodb.uri: ${vcap.services.mongodb.credentials.uri}
-    mongodb.authentication-database: ${vcap.services.mongodb.credentials.authentication-database}
-    mongodb.username: ${vcap.services.mongodb.credentials.username}
-    mongodb.password: ${vcap.services.mongodb.credentials.password}
 eureka:
   instance:
     nonSecurePort: 80
