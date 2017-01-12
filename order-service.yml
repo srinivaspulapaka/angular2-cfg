@@ -32,8 +32,8 @@ spring:
       default-queue: com.ctl.default.queue
     service:
       product-service:
-          url: ${vcap.services.config.credentials.zuul.product.url} 
-      
+          url: ${vcap.services.config.credentials.zuul.product.url}
+
 jwt:
     tokenExpirationTime: 2592000 # Number of minutes
     refreshTokenExpTime: 2592000 # Minutes
@@ -188,4 +188,6 @@ jwt:
     publicKey: apiclient@ctl.com
 
 order:
-    restUrl: http://qtomavmdt362.dev.qintra.com:7003/PoimOrderFlow/PoimService/RestServiceforPortal/processPortalOrder
+    #restUrl: http://qtomavmdt362.dev.qintra.com:7003/PoimOrderFlow/PoimService/RestServiceforPortal/processPortalOrder
+    restUrl: https://cxg7i.test.intranet/e2e/PoimOrderFlow/PoimService/RestServiceforPortal/processPortalOrder
+    authorization: Basic cGN0bDpPcmFuZ2VmZWF0aGVycyQk
