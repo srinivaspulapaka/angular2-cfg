@@ -33,3 +33,6 @@ redis:
     cacheHost: DS-FKXNWQ1 # Host name
     cachePort: 6379 # port number
     cacheExpiration: 300 #Seconds
+
+cart:
+    cart-timeout: 15
