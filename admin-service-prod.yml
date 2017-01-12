@@ -6,3 +6,7 @@ eureka:
   client:
     service-url:
       defaultZone: ${vcap.services.eureka.credentials.url}
+logging:
+  level:
+    com.netflix.discovery: "OFF"
+    com.netflix.eureka: "OFF"
