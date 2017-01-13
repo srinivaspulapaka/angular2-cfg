@@ -41,5 +41,5 @@ jwt:
 
 order:
     #restUrl: http://qtomavmdt362.dev.qintra.com:7003/PoimOrderFlow/PoimService/RestServiceforPortal/processPortalOrder
-    restUrl: https://cxg7i.test.intranet/e2e/PoimOrderFlow/PoimService/RestServiceforPortal/processPortalOrder
+    restUrl: https://cxg7i.test.intranet/itv1/PoimOrderFlow/PoimService/RestServiceforPortal/processPortalOrder
     authorization: Basic cGN0bDpPcmFuZ2VmZWF0aGVycyQk
