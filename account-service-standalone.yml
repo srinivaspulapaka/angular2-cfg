@@ -39,4 +39,5 @@ redis:
 camel:
     configFilePath: camel/camel-binding-config.xml
 account:
-    adminRealm:EMPLOYEE
+    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
+    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U

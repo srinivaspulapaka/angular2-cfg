@@ -33,4 +33,5 @@ jwt:
 camel:
     configFilePath: camel/camel-binding-cloud-config.xml
 account:
-    adminRealm:EMPLOYEE
+    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
+    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U

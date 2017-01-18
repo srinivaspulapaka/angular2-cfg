@@ -68,7 +68,8 @@ camel:
 # LOGGING
 #logging.level.org.springframework.security: DEBUG
 account:
-    adminRealm:EMPLOYEE
+    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
+    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
 ---
 
 spring:
@@ -108,7 +109,8 @@ redis:
 camel:
     configFilePath: camel/camel-binding-config.xml
 account:
-    adminRealm:EMPLOYEE
+    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
+    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
 ---
 
 spring:
@@ -151,7 +153,8 @@ redis:
 camel:
     configFilePath: camel/camel-binding-config.xml
 account:
-    adminRealm:EMPLOYEE
+    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
+    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
 ---
 
 spring:
@@ -189,4 +192,5 @@ jwt:
 camel:
     configFilePath: camel/camel-binding-cloud-config.xml
 account:
-    adminRealm:EMPLOYEE
+    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
+    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
