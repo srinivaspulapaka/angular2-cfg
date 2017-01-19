@@ -30,6 +30,19 @@ spring:
       account-queue: com.ctl.account.queue
       sfaint-queue: com.ctl.sfaint.queue
       default-queue: com.ctl.default.queue
+    account:
+      userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
+      enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
+      discountGroupDetails: true/0/true/S
+      invoiceOptionDetails: GF EXCLUSION/false/1/0/D
+      contractInformationDetails: QCONNECT/5000/599999/3/16/2015/123456/Y/12
+      salesInformationDetails: AC/SOV1/Automated Order
+      billingAccountDetails: Sic/0/LTL/false/true/BF/CO/CA/0/true
+      createOrderDetails: SUBMIT/pctl/BMG/b7cab119-5d9c-4ddc-ad4d-e016951ece8f/N/BMG/704883/52559143/52559143/10432921
+      loggedUserDetails: testEnterprise2@centurylink.com/name/3039925648
+      arrayOfString: 123456
+      aateConstants: 10760263/87850143/LATIS/false
+      getAccountsConstants: 0/0
 
 jwt:
     tokenExpirationTime: 5184000 # Number of minutes
@@ -67,9 +80,9 @@ camel:
 #      serviceId: ${PREFIX:}resource
 # LOGGING
 #logging.level.org.springframework.security: DEBUG
-account:
-    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
-    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
+#account:
+#    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
+#    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
 ---
 
 spring:
@@ -87,6 +100,19 @@ spring:
     account-queue: com.ctl.account.queue
     sfaint-queue: com.ctl.sfaint.queue
     default-queue: com.ctl.default.queue
+  account:
+    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
+    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
+    discountGroupDetails: true/0/true/S
+    invoiceOptionDetails: GF EXCLUSION/false/1/0/D
+    contractInformationDetails: QCONNECT/5000/599999/3/16/2015/123456/Y/12
+    salesInformationDetails: AC/SOV1/Automated Order
+    billingAccountDetails: Sic/0/LTL/false/true/BF/CO/CA/0/true
+    createOrderDetails: SUBMIT/pctl/BMG/b7cab119-5d9c-4ddc-ad4d-e016951ece8f/N/BMG/704883/52559143/52559143/10432921
+    loggedUserDetails: testEnterprise2@centurylink.com/name/3039925648
+    arrayOfString: 123456
+    aateConstants: 10760263/87850143/LATIS/false
+    getAccountsConstants: 0/0
 
 jwt:
     tokenExpirationTime: 5184000 # Number of minutes
@@ -108,9 +134,9 @@ redis:
 
 camel:
     configFilePath: camel/camel-binding-config.xml
-account:
-    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
-    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
+#account:
+#    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
+#    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
 ---
 
 spring:
@@ -128,6 +154,19 @@ spring:
     account-queue: com.ctl.account.queue
     sfaint-queue: com.ctl.sfaint.queue
     default-queue: com.ctl.default.queue
+  account:
+    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
+    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
+    discountGroupDetails: true/0/true/S
+    invoiceOptionDetails: GF EXCLUSION/false/1/0/D
+    contractInformationDetails: QCONNECT/5000/599999/3/16/2015/123456/Y/12
+    salesInformationDetails: AC/SOV1/Automated Order
+    billingAccountDetails: Sic/0/LTL/false/true/BF/CO/CA/0/true
+    createOrderDetails: SUBMIT/pctl/BMG/b7cab119-5d9c-4ddc-ad4d-e016951ece8f/N/BMG/704883/52559143/52559143/10432921
+    loggedUserDetails: testEnterprise2@centurylink.com/name/3039925648
+    arrayOfString: 123456
+    aateConstants: 10760263/87850143/LATIS/false
+    getAccountsConstants: 0/0
 
 jwt:
     tokenExpirationTime: 5184000 # Number of minutes
@@ -152,9 +191,9 @@ redis:
 
 camel:
     configFilePath: camel/camel-binding-config.xml
-account:
-    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
-    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
+#account:
+#    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
+#    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
 ---
 
 spring:
@@ -172,6 +211,20 @@ spring:
     account-queue: ${vcap.services.activemq.credentials.account.queue}
     sfaint-queue: ${vcap.services.activemq.credentials.sfaint.queue}
     default-queue: ${vcap.services.activemq.credentials.default.queue}
+  account:
+    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
+    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
+    discountGroupDetails: true/0/true/S
+    invoiceOptionDetails: GF EXCLUSION/false/1/0/D
+    contractInformationDetails: QCONNECT/5000/599999/3/16/2015/123456/Y/12
+    salesInformationDetails: AC/SOV1/Automated Order
+    billingAccountDetails: Sic/0/LTL/false/true/BF/CO/CA/0/true
+    createOrderDetails: SUBMIT/pctl/BMG/b7cab119-5d9c-4ddc-ad4d-e016951ece8f/N/BMG/704883/52559143/52559143/10432921
+    loggedUserDetails: testEnterprise2@centurylink.com/name/3039925648
+    arrayOfString: 123456
+    aateConstants: 10760263/87850143/LATIS/false
+    getAccountsConstants: 0/0
+
 eureka:
   instance:
     nonSecurePort: 80
@@ -191,6 +244,6 @@ jwt:
     publicKey: apiclient@ctl.com
 camel:
     configFilePath: camel/camel-binding-cloud-config.xml
-account:
-    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
-    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
+#account:
+#    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
+#    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
