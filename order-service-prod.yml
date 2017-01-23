@@ -1,5 +1,6 @@
 # EMBEDDED SERVER CONFIGURATION
 spring:
+  profiles: prod
   data:
     mongodb.host: ${vcap.services.mongodb.credentials.host}
     mongodb.port: ${vcap.services.mongodb.credentials.port}
@@ -42,4 +43,6 @@ jwt:
     publicKey: apiclient@ctl.com
 
 order:
-    restUrl: http://qtomavmdt362.dev.qintra.com:7003/PoimOrderFlow/PoimService/RestServiceforPortal/processPortalOrder
+    #restUrl: http://qtomavmdt362.dev.qintra.com:7003/PoimOrderFlow/PoimService/RestServiceforPortal/processPortalOrder
+    restUrl: https://cxg7i.test.intranet/itv1/PoimOrderFlow/PoimService/RestServiceforPortal/processPortalOrder
+    authorization: Basic cGN0bDpPcmFuZ2VmZWF0aGVycyQk
