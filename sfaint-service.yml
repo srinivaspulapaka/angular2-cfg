@@ -233,3 +233,16 @@ sfaint:
     createOppurtunityurl: https://qxgsfa-e2e.foss.dev.qintra.com/qxgsfa/servicesSec/platformCtlCreateOppty
     creditcheckurl: https://qxgsfa-e2e.foss.dev.qintra.com/qxgsfa/servicesSec/platformCtlRequestCreditCheck
     customerlookupurl: https://qxgsfa-e2e.foss.dev.qintra.com/qxgsfa/servicesSec/platformCtlLookupCustomer
+    
+
+---
+
+spring:
+  profiles: prod
+sfaint:
+    createleadurl: https://qxgsfa-itv1.foss.dev.qintra.com/qxgsfa/servicesSec/platformCtlCreateLead
+    createsfaccounturl: https://qxgsfa-itv1.foss.dev.qintra.com/qxgsfa/servicesSec/platformCtlCreateAccount
+    createOppurtunityurl: https://qxgsfa-itv1.foss.dev.qintra.com/qxgsfa/servicesSec/platformCtlCreateOppty
+    creditcheckurl: https://qxgsfa-itv1.foss.dev.qintra.com/qxgsfa/servicesSec/platformCtlRequestCreditCheck
+    customerlookupurl: https://qxgsfa-itv1.foss.dev.qintra.com/qxgsfa/servicesSec/platformCtlLookupCustomer
+    
