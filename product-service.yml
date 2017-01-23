@@ -162,3 +162,11 @@ redis:
 price:
     restUrl: https://cxg7i.test.intranet/int2/GetPriceSvc
     authorization: Basic cG9ydGFsQ3hnNzo1ZEhyOGlEeUxwdXExSklVakZnRV4=
+    
+    
+---
+
+spring:
+  profiles: prod
+price:
+    restUrl: https://cxg7i.test.intranet/itv1/GetPriceSvc
