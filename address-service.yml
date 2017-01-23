@@ -186,3 +186,11 @@ eureka:
       defaultZone: ${vcap.services.eureka.credentials.url}
 camel:
     configFilePath: camel/camel-binding-config.xml      
+    
+---
+
+spring:
+  profiles: prod
+camel:
+    configFilePath: camel/camel-binding-prod-config.xml
+    
