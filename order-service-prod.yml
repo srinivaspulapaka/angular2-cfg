@@ -28,7 +28,7 @@ eureka:
       defaultZone: ${vcap.services.eureka.credentials.url}
 
 camel:
-    configFilePath: camel/camel-binding-cloud-config.xml
+    configFilePath: camel/camel-binding-prod-config.xml
 
 redis:
     cacheHost: ${vcap.services.redis.credentials.host}
