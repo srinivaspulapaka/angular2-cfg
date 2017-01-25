@@ -3,3 +3,17 @@ spring:
   profiles: uat
   account:
     contractInformationDetails: Q.ADVAN M/5000/599999/3/16/2015/123456/Y/12
+    userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
+    enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
+    discountGroupDetails: true/0/true/S
+    invoiceOptionDetails: GF EXCLUSION/false/1/0/D
+    salesInformationDetails: AC/SOV1/Automated Order
+    billingAccountDetails: Sic/0/LTL/false/true/BF/CO/CA/0/true
+    createOrderDetails: SUBMIT/pctl/BMG/b7cab119-5d9c-4ddc-ad4d-e016951ece8f/N/BMG/704883/52559143/52559143/10432921
+    loggedUserDetails: testEnterprise2@centurylink.com/name/3039925648
+    arrayOfString: 123456
+    aateConstants: 10760263/87850143/LATIS/false
+    getAccountsConstants: 0/0
+
+camel:
+    configFilePath: camel/camel-binding-prod-config.xml
