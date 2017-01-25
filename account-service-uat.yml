@@ -1,0 +1,5 @@
+# EMBEDDED SERVER CONFIGURATION
+spring:
+  profiles: uat
+  account:
+    contractInformationDetails: Q.ADVAN M/5000/599999/3/16/2015/123456/Y/12
