@@ -193,12 +193,12 @@ spring:
     properties:
       mail:
         smtp:
-          auth: true
+          auth: ${vcap.services.mail.credentials.auth}
           ssl:
-            enable: true
+            enable: ${vcap.services.mail.credentials.ssl}
           starttls:
-            enable: true
-            required: false
+            enable: ${vcap.services.mail.credentials.starttls}
+            required: ${vcap.services.mail.credentials.required}
   activemq:
     broker-url: ${vcap.services.activemq.credentials.uri}
     user-queue: ${vcap.services.activemq.credentials.user.queue}
