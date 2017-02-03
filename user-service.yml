@@ -37,7 +37,7 @@ jwt:
     publicKey: apiclient@ctl.com
 
 cart:
-    cart-timeout: 15
+    cart-timeout: 72
 
 # EUREKA
 eureka:
@@ -180,4 +180,4 @@ jwt:
     publicKey: apiclient@ctl.com
 
 cart:
-    cart-timeout: 15
+    cart-timeout: 72
