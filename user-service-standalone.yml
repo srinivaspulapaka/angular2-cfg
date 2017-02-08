@@ -35,4 +35,4 @@ redis:
     cacheExpiration: 300 #Seconds
 
 cart:
-    cart-timeout: 72
+    cart-timeout: 4320

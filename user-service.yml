@@ -50,6 +50,8 @@ redis:
     cachePort: 6379 # port number
     cacheExpiration: 300 #Seconds
 
+cart:
+    cart-timeout: 4320
 
 # Disable spring basic authentication security
 #security:
@@ -103,6 +105,8 @@ redis:
     cachePort: 6379 # port number
     cacheExpiration: 300 #Seconds
 
+cart:
+    cart-timeout: 4320
 ---
 
 spring:
@@ -141,6 +145,8 @@ redis:
     cachePort: 6379 # port number
     cacheExpiration: 300 #Seconds
 
+cart:
+    cart-timeout: 4320
 ---
 
 spring:
@@ -180,4 +186,4 @@ jwt:
     publicKey: apiclient@ctl.com
 
 cart:
-    cart-timeout: 72
+    cart-timeout: 4320

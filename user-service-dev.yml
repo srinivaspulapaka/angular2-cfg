@@ -35,4 +35,4 @@ jwt:
     publicKey: apiclient@ctl.com
 
 cart:
-    cart-timeout: 72
+    cart-timeout: 4320
