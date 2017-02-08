@@ -36,9 +36,6 @@ jwt:
     tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
     publicKey: apiclient@ctl.com
 
-cart:
-    cart-timeout: 72
-
 # EUREKA
 eureka:
   client:
