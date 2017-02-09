@@ -1,0 +1,5 @@
+# EMBEDDED SERVER CONFIGURATION
+spring:
+  profiles: release
+camel:
+    configFilePath: camel/camel-binding-release-config.xml

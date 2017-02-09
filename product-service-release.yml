@@ -1,0 +1,5 @@
+# EMBEDDED SERVER CONFIGURATION
+spring:
+  profiles: release
+price:
+    restUrl: https://cxg7i.test.intranet/itv1/GetPriceSvc
