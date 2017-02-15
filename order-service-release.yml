@@ -3,3 +3,6 @@ spring:
   profiles: release
 camel:
     configFilePath: camel/camel-binding-release-config.xml
+order:
+    restUrl: https://cxg7i.corp.intranet/PoimService/processPortalOrder
+    authorization: Basic cGN0bDpPcmFuZ2VmZWF0aGVycyQk

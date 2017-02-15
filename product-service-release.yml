@@ -2,4 +2,4 @@
 spring:
   profiles: release
 price:
-    restUrl: https://cxg7i.test.intranet/itv1/GetPriceSvc
+    restUrl: https://cxg7i.corp.intranet/GetPriceSvc
