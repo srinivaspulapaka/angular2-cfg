@@ -1,6 +1,51 @@
 # EMBEDDED SERVER CONFIGURATION
 spring:
   profiles: release
+  data:
+    mongodb.host: ${vcap.services.mongodb.credentials.host}
+    mongodb.port: ${vcap.services.mongodb.credentials.port}
+    mongodb.uri: ${vcap.services.mongodb.credentials.uri}
+  mail:
+    host: ${vcap.services.mail.credentials.host}
+    port: ${vcap.services.mail.credentials.port}
+    username: ${vcap.services.mail.credentials.username}
+    password: ${vcap.services.mail.credentials.password}
+    properties:
+      mail:
+        smtp:
+          auth: ${vcap.services.mail.credentials.auth}
+          ssl:
+            enable: ${vcap.services.mail.credentials.ssl}
+          starttls:
+            enable: ${vcap.services.mail.credentials.starttls}
+            required: ${vcap.services.mail.credentials.required}
+  activemq:
+    broker-url: ${vcap.services.activemq.credentials.uri}
+    user-queue: ${vcap.services.activemq.credentials.user.queue}
+    cart-queue: ${vcap.services.activemq.credentials.cart.queue}
+    order-queue: ${vcap.services.activemq.credentials.order.queue}
+    notification-queue: ${vcap.services.activemq.credentials.notification.queue}
+    account-queue: ${vcap.services.activemq.credentials.account.queue}
+    sfaint-queue: ${vcap.services.activemq.credentials.sfaint.queue}
+    default-queue: ${vcap.services.activemq.credentials.default.queue}
+
+eureka:
+  instance:
+    nonSecurePort: 80
+    hostname: ${vcap.application.uris[0]}
+  client:
+    service-url:
+      defaultZone: ${vcap.services.eureka.credentials.url}
+redis:
+    cacheHost: ${vcap.services.redis.credentials.host}
+    cachePort: ${vcap.services.redis.credentials.port}
+    cacheExpiration: 300 #Seconds
+jwt:
+    tokenExpirationTime: 2592000 # Number of minutes
+    refreshTokenExpTime: 2592000 # Minutes
+    tokenIssuer: Ctl
+    tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
+    publicKey: apiclient@ctl.com
 
 images:
     logo: ${vcap.services.config.credentials.zuul.ui.url}/assets/img/logo-black-text.png
