@@ -1,0 +1,6 @@
+# EMBEDDED SERVER CONFIGURATION
+spring:
+  profiles: release
+
+images:
+    logo: ${vcap.services.config.credentials.zuul.ui.url}/assets/img/logo-black-text.png
