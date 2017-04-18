@@ -18,7 +18,7 @@ spring:
   encryptedKey: Ec5hKDTAWGjb3P4RHHEwD3UbjLCgO/WXEqvsitExblQ=
   userName: userName
   hashCodename: hashCode
-  userNameFromHeader: testpctl@test1.control.centurylink.com
+  userNameFromYml: testpctl@test1.control.centurylink.com
   service:
     order-service:
         url: ${vcap.services.config.credentials.zuul.order.url}
