@@ -10,6 +10,11 @@ spring:
     sfaint-queue: com.ctl.sfaint.queue
     default-queue: com.ctl.default.queue
   cookieName: testCookie
+  headerName: ct-remote-user
+  encryptedKey: Ec5hKDTAWGjb3P4RHHEwD3UbjLCgO/WXEqvsitExblQ=
+  userName: userName
+  hashCodename: hashCode
+  userNameFromHeader: testpctl@test1.control.centurylink.com
   service:
     order-service:
         url: http://${eureka.instance.hostname}:8088

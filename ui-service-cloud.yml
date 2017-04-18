@@ -13,6 +13,12 @@ spring:
     account-queue: ${vcap.services.activemq.credentials.account.queue}
     sfaint-queue: ${vcap.services.activemq.credentials.sfaint.queue}
     default-queue: ${vcap.services.activemq.credentials.default.queue}
+  cookieName: testCookie
+  headerName: ct-remote-user
+  encryptedKey: Ec5hKDTAWGjb3P4RHHEwD3UbjLCgO/WXEqvsitExblQ=
+  userName: userName
+  hashCodename: hashCode
+  userNameFromHeader: testpctl@test1.control.centurylink.com
   service:
     order-service:
         url: ${vcap.services.config.credentials.zuul.order.url}
