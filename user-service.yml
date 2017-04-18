@@ -83,7 +83,11 @@ spring:
     order-queue: com.ctl.order.queue
     sfaint-queue: com.ctl.sfaint.queue
     default-queue: com.ctl.default.queue
-
+  service:
+    order-service:
+        url: http://${eureka.instance.hostname}:8088
+    account-service:
+        url: http://${eureka.instance.hostname}:8090
 jwt:
     tokenExpirationTime: 5184000 # Number of minutes
     refreshTokenExpTime: 5184000 # Minutes
@@ -119,7 +123,11 @@ spring:
     order-queue: com.ctl.order.queue
     sfaint-queue: com.ctl.sfaint.queue
     default-queue: com.ctl.default.queue
-
+  service:
+    order-service:
+        url: http://${eureka.instance.hostname}:8088
+    account-service:
+        url: http://${eureka.instance.hostname}:8090
 jwt:
     tokenExpirationTime: 5184000 # Number of minutes
     refreshTokenExpTime: 5184000 # Minutes
@@ -161,7 +169,11 @@ spring:
     account-queue: ${vcap.services.activemq.credentials.account.queue}
     sfaint-queue: ${vcap.services.activemq.credentials.sfaint.queue}
     default-queue: ${vcap.services.activemq.credentials.default.queue}
-
+  service:
+    order-service:
+        url: http://${eureka.instance.hostname}:8088
+    account-service:
+        url: http://${eureka.instance.hostname}:8090
 eureka:
   instance:
     nonSecurePort: 80

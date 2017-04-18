@@ -11,7 +11,11 @@ spring:
     order-queue: com.ctl.order.queue
     sfaint-queue: com.ctl.sfaint.queue
     default-queue: com.ctl.default.queue
-
+  service:
+    order-service:
+        url: http://${eureka.instance.hostname}:8088
+    account-service:
+        url: http://${eureka.instance.hostname}:8090
 jwt:
     tokenExpirationTime: 5184000 # Number of minutes
     refreshTokenExpTime: 5184000 # Minutes
