@@ -125,9 +125,9 @@ spring:
     default-queue: com.ctl.default.queue
   service:
     order-service:
-        url: http://${eureka.instance.hostname}:8088
+      url: ${vcap.services.config.credentials.zuul.order.url}
     account-service:
-        url: http://${eureka.instance.hostname}:8090
+      url: ${vcap.services.config.credentials.zuul.account.url}
 jwt:
     tokenExpirationTime: 5184000 # Number of minutes
     refreshTokenExpTime: 5184000 # Minutes
