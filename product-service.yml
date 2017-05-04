@@ -124,7 +124,7 @@ camel:
 
 price:
     restUrl: https://cxg7i.test.intranet/int2/GetPriceSvc
-    authorization: Basic cG9ydGFsQ3hnNzo1ZEhyOGlEeUxwdXExSklVakZnRV4=
+    authorization: Basic cG9ydGFsQ3hnNzpwaGFyOFF1cHJlY1VzcDUjdWQ=
 
 ---
 # EMBEDDED SERVER CONFIGURATION
@@ -161,7 +161,7 @@ redis:
 
 price:
     restUrl: https://cxg7i.test.intranet/int2/GetPriceSvc
-    authorization: Basic cG9ydGFsQ3hnNzo1ZEhyOGlEeUxwdXExSklVakZnRV4=
+    authorization: Basic cG9ydGFsQ3hnNzpwaGFyOFF1cHJlY1VzcDUjdWQ=
     
     
 ---
