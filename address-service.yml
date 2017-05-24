@@ -96,7 +96,8 @@ spring:
     mongodb.host: localhost
     mongodb.port: 27017
     mongodb.uri: mongodb://localhost/pctl
-
+  address:
+    clientId: GeoDevTest
 jwt:
     tokenExpirationTime: 2592000 # Number of minutes
     refreshTokenExpTime: 2592000 # Minutes
@@ -185,12 +186,12 @@ eureka:
     service-url:
       defaultZone: ${vcap.services.eureka.credentials.url}
 camel:
-    configFilePath: camel/camel-binding-config.xml      
-    
+    configFilePath: camel/camel-binding-config.xml
+
 ---
 
 spring:
   profiles: prod
 camel:
     configFilePath: camel/camel-binding-prod-config.xml
-    
+
