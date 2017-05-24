@@ -3,5 +3,6 @@ spring:
   profiles: prod
   address:
     clientId: GeoDevTest
+    webService: SOAP
 camel:
     configFilePath: camel/camel-binding-prod-config.xml
