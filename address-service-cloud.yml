@@ -6,6 +6,7 @@ spring:
     mongodb.uri: ${vcap.services.mongodb.credentials.uri}
   address:
     clientId: GeoDevTest
+    webService: SOAP
 eureka:
   instance:
     nonSecurePort: 80
