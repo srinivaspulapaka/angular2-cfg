@@ -4,6 +4,8 @@ spring:
     mongodb.host: ${vcap.services.mongodb.credentials.host}
     mongodb.port: ${vcap.services.mongodb.credentials.port}
     mongodb.uri: ${vcap.services.mongodb.credentials.uri}
+  address:
+    clientId: GeoDevTest
 eureka:
   instance:
     nonSecurePort: 80
