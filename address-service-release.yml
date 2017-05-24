@@ -1,5 +1,7 @@
 # EMBEDDED SERVER CONFIGURATION
 spring:
   profiles: release
+  address:
+    clientId: GeoDevTest  
 camel:
     configFilePath: camel/camel-binding-release-config.xml
