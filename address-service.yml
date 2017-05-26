@@ -195,3 +195,10 @@ spring:
 camel:
     configFilePath: camel/camel-binding-prod-config.xml
 
+# ZULL
+zuul:
+  routes:
+     cart-service:
+          sensitiveHeaders:
+          path: /api/cart-service/**
+          stripPrefix: true
