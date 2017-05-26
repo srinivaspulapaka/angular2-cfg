@@ -178,6 +178,10 @@ spring:
     mongodb.host: ${vcap.services.mongodb.credentials.host}
     mongodb.port: ${vcap.services.mongodb.credentials.port}
     mongodb.uri: ${vcap.services.mongodb.credentials.uri}
+  service:
+    cart-service:
+        url: ${vcap.services.config.credentials.zuul.cart.url}
+    
 eureka:
   instance:
     nonSecurePort: 80
