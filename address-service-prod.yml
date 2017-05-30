@@ -3,6 +3,8 @@ spring:
   profiles: prod
   address:
     clientId: GeoDevTest
-    webService: SOAP
+    webService: REST
+    restAddressUrl: https://cxg7i.test.intranet/itv1/api/v1/postalAddresses/validations
+    authorization: Basic cGN0bDpPcmFuZ2VmZWF0aGVycyQk
 camel:
     configFilePath: camel/camel-binding-prod-config.xml
