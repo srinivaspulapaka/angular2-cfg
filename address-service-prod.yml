@@ -4,7 +4,8 @@ spring:
   address:
     clientId: GeoDevTest
     webService: REST
-    restAddressUrl: https://cxg7i.test.intranet/itv1/api/v1/postalAddresses/validations
+    postalRestUrl: https://cxg7i.test.intranet/itv1/api/v1/postalAddresses/validations
+    civicRestUrl: https://cxg7i.test.intranet/itv1/api/v1/civicAddresses/validations
     authorization: Basic cGN0bDpPcmFuZ2VmZWF0aGVycyQk
 camel:
     configFilePath: camel/camel-binding-prod-config.xml
