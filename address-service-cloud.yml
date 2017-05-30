@@ -6,7 +6,9 @@ spring:
     mongodb.uri: ${vcap.services.mongodb.credentials.uri}
   address:
     clientId: GeoDevTest
-    webService: SOAP
+    webService: REST
+    restAddressUrl: https://cxg7i.test.intranet/itv1/api/v1/postalAddresses/validations
+    authorization: Basic cGN0bDpPcmFuZ2VmZWF0aGVycyQk
 eureka:
   instance:
     nonSecurePort: 80
