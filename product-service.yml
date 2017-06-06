@@ -160,13 +160,13 @@ redis:
     cacheExpiration: 300 #Seconds
 
 price:
-    restUrl: https://cxg7i.test.intranet/int2/GetPriceSvc
+    restUrl: https://cxg7i.test.intranet/e2e/GetPriceSvc
     authorization: Basic cG9ydGFsQ3hnNzpwaGFyOFF1cHJlY1VzcDUjdWQ=
-    
-    
+
+
 ---
 
 spring:
   profiles: prod
 price:
-    restUrl: https://cxg7i.test.intranet/itv1/GetPriceSvc
+    restUrl: https://cxg7i.test.intranet/e2e/GetPriceSvc
