@@ -98,6 +98,10 @@ spring:
     mongodb.uri: mongodb://localhost/pctl
   address:
     clientId: GeoDevTest
+url:
+  addressServiceEndPoint: http://geoestest1.dev.qintra.com/api/v1/AddressService.svc
+  civicAddressSoapAction: http://geoes.centurylink.com/v1/AddressServiceContract/CivicAddressValidation
+  postalAddressSoapAction: http://geoes.centurylink.com/v1/AddressServiceContract/PostalAddressValidation
 jwt:
     tokenExpirationTime: 2592000 # Number of minutes
     refreshTokenExpTime: 2592000 # Minutes
@@ -181,7 +185,10 @@ spring:
   service:
     cart-service:
         url: ${vcap.services.config.credentials.zuul.cart.url}
-    
+url:
+  addressServiceEndPoint: http://geoestest1.dev.qintra.com/api/v1/AddressService.svc
+  civicAddressSoapAction: http://geoes.centurylink.com/v1/AddressServiceContract/CivicAddressValidation
+  postalAddressSoapAction: http://geoes.centurylink.com/v1/AddressServiceContract/PostalAddressValidation
 eureka:
   instance:
     nonSecurePort: 80
@@ -198,7 +205,10 @@ spring:
   profiles: prod
 camel:
     configFilePath: camel/camel-binding-prod-config.xml
-
+url:
+  addressServiceEndPoint: http://geoestest1.dev.qintra.com/api/v1/AddressService.svc
+  civicAddressSoapAction: http://geoes.centurylink.com/v1/AddressServiceContract/CivicAddressValidation
+  postalAddressSoapAction: http://geoes.centurylink.com/v1/AddressServiceContract/PostalAddressValidation
 # ZULL
 zuul:
   routes:

@@ -11,5 +11,9 @@ eureka:
   client:
     service-url:
       defaultZone: ${vcap.services.eureka.credentials.url}
+url:
+  addressServiceEndPoint: http://geoestest1.dev.qintra.com/api/v1/AddressService.svc
+  civicAddressSoapAction: http://geoes.centurylink.com/v1/AddressServiceContract/CivicAddressValidation
+  postalAddressSoapAction: http://geoes.centurylink.com/v1/AddressServiceContract/PostalAddressValidation
 camel:
     configFilePath: camel/camel-binding-config.xml

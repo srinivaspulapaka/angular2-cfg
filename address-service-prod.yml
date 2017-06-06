@@ -7,5 +7,9 @@ spring:
     postalRestUrl: https://cxg7i.test.intranet/itv1/api/v1/postalAddresses/validations
     civicRestUrl: https://cxg7i.test.intranet/itv1/api/v1/civicAddresses/validations
     authorization: Basic cGN0bDpPcmFuZ2VmZWF0aGVycyQk
+url:
+  addressServiceEndPoint: http://geoestest1.dev.qintra.com/api/v1/AddressService.svc
+  civicAddressSoapAction: http://geoes.centurylink.com/v1/AddressServiceContract/CivicAddressValidation
+  postalAddressSoapAction: http://geoes.centurylink.com/v1/AddressServiceContract/PostalAddressValidation
 camel:
     configFilePath: camel/camel-binding-prod-config.xml

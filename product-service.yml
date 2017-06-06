@@ -32,7 +32,8 @@ jwt:
     route:
       authentication:
         path: auth
-
+url:
+  getProdAcctInfoUrl: http://cdi-e2e.foss.dev.qintra.com/cdi/webservices/getProdAcctInfo
 redis:
     cacheHost: DS-FKXNWQ1 # Host name
     cachePort: 6379 # port number
@@ -102,6 +103,8 @@ jwt:
     route:
       authentication:
         path: auth
+url:
+  getProdAcctInfoUrl: http://cdi-e2e.foss.dev.qintra.com/cdi/webservices/getProdAcctInfo
 
 redis:
     cacheHost: DS-FKXNWQ1 # Host name
@@ -154,6 +157,8 @@ eureka:
   client:
     service-url:
       defaultZone: ${vcap.services.eureka.credentials.url}
+url:
+  getProdAcctInfoUrl: http://cdi-e2e.foss.dev.qintra.com/cdi/webservices/getProdAcctInfo
 redis:
     cacheHost: ${vcap.services.redis.credentials.host}
     cachePort: ${vcap.services.redis.credentials.port}
@@ -168,5 +173,7 @@ price:
 
 spring:
   profiles: prod
+url:
+  getProdAcctInfoUrl: http://cdi-e2e.foss.dev.qintra.com/cdi/webservices/getProdAcctInfo
 price:
     restUrl: https://cxg7i.test.intranet/e2e/GetPriceSvc

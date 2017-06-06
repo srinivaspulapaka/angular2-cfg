@@ -1,5 +1,7 @@
 # EMBEDDED SERVER CONFIGURATION
 spring:
   profiles: prod
+url:
+  getProdAcctInfoUrl: http://cdi-e2e.foss.dev.qintra.com/cdi/webservices/getProdAcctInfo
 price:
     restUrl: https://cxg7i.test.intranet/e2e/GetPriceSvc
