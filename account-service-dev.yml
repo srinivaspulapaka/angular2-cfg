@@ -35,7 +35,7 @@ account:
     userAuthString: PASSWORD/pctl/EMPLOYEE/Orangefeathers$$/pctl/EMPLOYEE
     enterPriseDetails: false/BMG/testEnterprise2@hotmail.com/TEST BMG enterprise2/U
 url:
-  userAdminServiceUrl: https://ecaps-test1.foss.dev.qintra.com:443/ecaps/service/UserAdminService
+  userAdminServiceUrl: https://ecaps-e2e.foss.dev.qintra.com:443/ecaps/service/UserAdminService
   accountServiceUrl: https://cxg7i.test.intranet/e2e/ecaps/service/AccountService
   enterpriseAdminService: https://cxg7i.test.intranet/e2e/ecaps/service/EnterpriseAdminService
   qcsetupSFAWS: http://qcsetup-e2e.dev.qintra.com/webservice/qcsetupSFAWS

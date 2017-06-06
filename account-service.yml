@@ -52,7 +52,7 @@ jwt:
     publicKey: apiclient@ctl.com
 
 url:
-  userAdminServiceUrl: https://ecaps-test1.foss.dev.qintra.com:443/ecaps/service/UserAdminService
+  userAdminServiceUrl: https://ecaps-e2e.foss.dev.qintra.com:443/ecaps/service/UserAdminService
   accountServiceUrl: https://cxg7i.test.intranet/e2e/ecaps/service/AccountService
   enterpriseAdminService: https://cxg7i.test.intranet/e2e/ecaps/service/EnterpriseAdminService
   qcsetupSFAWS: http://qcsetup-e2e.dev.qintra.com/webservice/qcsetupSFAWS
@@ -131,7 +131,7 @@ jwt:
     tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
     publicKey: apiclient@ctl.com
 url:
-  userAdminServiceUrl: https://ecaps-test1.foss.dev.qintra.com:443/ecaps/service/UserAdminService
+  userAdminServiceUrl: https://ecaps-e2e.foss.dev.qintra.com:443/ecaps/service/UserAdminService
   accountServiceUrl: https://cxg7i.test.intranet/e2e/ecaps/service/AccountService
   enterpriseAdminService: https://cxg7i.test.intranet/e2e/ecaps/service/EnterpriseAdminService
   qcsetupSFAWS: http://qcsetup-e2e.dev.qintra.com/webservice/qcsetupSFAWS
@@ -194,7 +194,7 @@ jwt:
     tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
     publicKey: apiclient@ctl.com
 url:
-  userAdminServiceUrl: https://ecaps-test1.foss.dev.qintra.com:443/ecaps/service/UserAdminService
+  userAdminServiceUrl: https://ecaps-e2e.foss.dev.qintra.com:443/ecaps/service/UserAdminService
   accountServiceUrl: https://cxg7i.test.intranet/e2e/ecaps/service/AccountService
   enterpriseAdminService: https://cxg7i.test.intranet/e2e/ecaps/service/EnterpriseAdminService
   qcsetupSFAWS: http://qcsetup-e2e.dev.qintra.com/webservice/qcsetupSFAWS
@@ -271,7 +271,7 @@ jwt:
     tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
     publicKey: apiclient@ctl.com
 url:
-  userAdminServiceUrl: https://ecaps-test1.foss.dev.qintra.com:443/ecaps/service/UserAdminService
+  userAdminServiceUrl: https://ecaps-e2e.foss.dev.qintra.com:443/ecaps/service/UserAdminService
   accountServiceUrl: https://cxg7i.test.intranet/e2e/ecaps/service/AccountService
   enterpriseAdminService: https://cxg7i.test.intranet/e2e/ecaps/service/EnterpriseAdminService
   qcsetupSFAWS: http://qcsetup-e2e.dev.qintra.com/webservice/qcsetupSFAWS
