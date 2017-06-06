@@ -14,10 +14,13 @@ spring:
     sfaint-queue: ${vcap.services.activemq.credentials.sfaint.queue}
     default-queue: ${vcap.services.activemq.credentials.default.queue}
   cookieName: testCookie
-  headerName: ct-remote-user
+  headerParameterName: ct-remote-user
   encryptedKey: Ec5hKDTAWGjb3P4RHHEwD3UbjLCgO/WXEqvsitExblQ=
-  userName: userName
-  hashCodename: hashCode
+  userNameParameterName: userName
+  hashCodeParameterName: HashKey
+  enterpriseIdParameterName: EID
+  billingAccountIdParameterName: BAN
+  isSdwanUserParameterName: SDWANCustomer
   userNameFromYml: testpctl@test1.control.centurylink.com
   service:
     order-service:
