@@ -21,11 +21,14 @@ spring:
       sfaint-queue: com.ctl.sfaint.queue
       default-queue: com.ctl.default.queue
     cookieName: testCookie
-    headerName: ct-remote-user
+    headerParameterName: ct-remote-user
     encryptedKey: Ec5hKDTAWGjb3P4RHHEwD3UbjLCgO/WXEqvsitExblQ=
-    userName: userName
-    hashCodename: hashCode
-    userNameFromYml: testpctl@test1.control.centurylink.com
+    userNameParameterName: userName
+    hashCodeParameterName: HashKey
+    enterpriseIdParameterName: EID
+    billingAccountIdParameterName: BAN
+    isSdwanUserParameterName: SDWANCustomer
+    userNameFromYml: testpctl@test1.control.centurylink.com 
 jwt:
     tokenExpirationTime: 2592000 # Number of minutes
     refreshTokenExpTime: 2592000 # Minutes
