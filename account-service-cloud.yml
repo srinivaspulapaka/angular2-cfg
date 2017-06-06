@@ -45,11 +45,14 @@ jwt:
     tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
     publicKey: apiclient@ctl.com
 url:
-    userAdminServiceUrl: https://ecaps-test1.foss.dev.qintra.com:443/ecaps/service/UserAdminService
-    accountServiceUrl: https://cxg7i.test.intranet/itv1/ecaps/service/AccountService
-    enterpriseAdminService: https://cxg7i.test.intranet/itv1/ecaps/service/EnterpriseAdminService
-    qcsetupSFAWS: http://qcsetup-itv1.dev.qintra.com/webservice/qcsetupSFAWS
-    password: cGN0bDpPcmFuZ2VmZWF0aGVycyQk
+  userAdminServiceUrl: https://ecaps-test1.foss.dev.qintra.com:443/ecaps/service/UserAdminService
+  accountServiceUrl: https://cxg7i.test.intranet/e2e/ecaps/service/AccountService
+  enterpriseAdminService: https://cxg7i.test.intranet/e2e/ecaps/service/EnterpriseAdminService
+  qcsetupSFAWS: http://qcsetup-e2e.dev.qintra.com/webservice/qcsetupSFAWS
+  createEnterprise: https://cxg7i.test.intranet/e2e/ecaps/service/EnterpriseAdminService
+  createBillingAccount: http://qcsetup-e2e.dev.qintra.com/webservice/qcsetupSFAWS
+  assignAccountToEnterprise: https://cxg7i.test.intranet/e2e/ecaps/service/AccountService
+  password: cGN0bDpPcmFuZ2VmZWF0aGVycyQk
 
 camel:
     configFilePath: camel/camel-binding-prod-config.xml

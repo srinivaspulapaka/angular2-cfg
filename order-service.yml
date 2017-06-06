@@ -198,3 +198,5 @@ spring:
   profiles: prod
 camel:
     configFilePath: camel/camel-binding-prod-config.xml
+url:
+    reserveOrderIdUrl: http://ordering-e2e.dev.qintra.com:80/OaWSLite/OaWSLite

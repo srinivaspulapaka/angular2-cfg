@@ -43,3 +43,5 @@ jwt:
 
 order:
     restUrl: http://qtomavmdt362.dev.qintra.com:7003/PoimOrderFlow/PoimService/RestServiceforPortal/processPortalOrder
+url:
+    reserveOrderIdUrl: http://ordering-e2e.dev.qintra.com:80/OaWSLite/OaWSLite
