@@ -28,7 +28,7 @@ spring:
     enterpriseIdParameterName: EID
     billingAccountIdParameterName: BAN
     isSdwanUserParameterName: SDWANCustomer
-    userNameFromYml: testpctl@test1.control.centurylink.com 
+    userNameFromYml: testpctl@test1.control.centurylink.com
 jwt:
     tokenExpirationTime: 2592000 # Number of minutes
     refreshTokenExpTime: 2592000 # Minutes
@@ -253,10 +253,15 @@ spring:
     sfaint-queue: ${vcap.services.activemq.credentials.sfaint.queue}
     default-queue: ${vcap.services.activemq.credentials.default.queue}
   cookieName: testCookie
-  headerName: ct-remote-user
+  headerParameterName: ct-remote-user
   encryptedKey: Ec5hKDTAWGjb3P4RHHEwD3UbjLCgO/WXEqvsitExblQ=
-  userName: userName
-  hashCodename: hashCode
+  decryptedData: PBYOehtzhfIE7glq7zaThtBDYRsdXK0C
+  userNameParameterName: username
+  hashCodeParameterName: hashkey
+  enterpriseIdParameterName: eid
+  billingAccountIdParameterName: ban
+  isSdwanUserParameterName: sdwancustomer
+  serviceType: servicetype
   userNameFromYml: testpctl@test1.control.centurylink.com
   service:
     order-service:
