@@ -20,17 +20,17 @@ spring:
       account-queue: com.ctl.account.queue
       sfaint-queue: com.ctl.sfaint.queue
       default-queue: com.ctl.default.queue
-   cookieName: testCookie
-   headerParameterName: ct-remote-user
-   encryptedKey: Ec5hKDTAWGjb3P4RHHEwD3UbjLCgO/WXEqvsitExblQ=
-   decryptedData: PBYOehtzhfIE7glq7zaThtBDYRsdXK0C
-   userNameParameterName: username
-   hashCodeParameterName: hashkey
-   enterpriseIdParameterName: eid
-   billingAccountIdParameterName: ban
-   isSdwanUserParameterName: sdwancustomer
-   serviceType: servicetype
-   userNameFromYml: testpctl@test1.control.centurylink.com     
+    cookieName: testCookie
+    headerParameterName: ct-remote-user
+    encryptedKey: Ec5hKDTAWGjb3P4RHHEwD3UbjLCgO/WXEqvsitExblQ=
+    decryptedData: PBYOehtzhfIE7glq7zaThtBDYRsdXK0C
+    userNameParameterName: username
+    hashCodeParameterName: hashkey
+    enterpriseIdParameterName: eid
+    billingAccountIdParameterName: ban
+    isSdwanUserParameterName: sdwancustomer
+    serviceType: servicetype
+    userNameFromYml: testpctl@test1.control.centurylink.com     
  
 jwt:
     tokenExpirationTime: 2592000 # Number of minutes
