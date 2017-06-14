@@ -23,7 +23,7 @@ spring:
   billingAccountIdParameterName: ban
   isSdwanUserParameterName: sdwancustomer
   serviceType: servicetype
-  userNameFromYml: testpctl@test1.control.centurylink.com
+  userNameFromYml: 10759506e2e@e2e.control.centurylink.com
   service:
     order-service:
         url: ${vcap.services.config.credentials.zuul.order.url}
