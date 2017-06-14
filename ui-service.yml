@@ -30,7 +30,7 @@ spring:
     billingAccountIdParameterName: ban
     isSdwanUserParameterName: sdwancustomer
     serviceType: servicetype
-    userNameFromYml: testpctl@test1.control.centurylink.com     
+    userNameFromYml: 10759506e2e@e2e.control.centurylink.com
  
 jwt:
     tokenExpirationTime: 2592000 # Number of minutes
