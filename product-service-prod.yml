@@ -5,3 +5,5 @@ url:
   getProdAcctInfoUrl: http://cdi-e2e.foss.dev.qintra.com/cdi/webservices/getProdAcctInfo
 price:
     restUrl: https://cxg7i.test.intranet/e2e/GetPriceSvc
+    fibProdAvailRestUrl: https://entservices-itv1.foss.dev.qintra.com/entservices/services/GetAvailability
+    fibProdAvailRestUrlAuth: Basic ZXNsc3ZjOlcwcmtncHB3MQ==

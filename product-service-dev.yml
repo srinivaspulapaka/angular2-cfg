@@ -21,3 +21,5 @@ redis:
 price:
     restUrl: https://cxg7i.test.intranet/e2e/GetPriceSvc
     authorization: Basic cG9ydGFsQ3hnNzpwaGFyOFF1cHJlY1VzcDUjdWQ=
+    fibProdAvailRestUrl: https://entservices-itv1.foss.dev.qintra.com/entservices/services/GetAvailability
+    fibProdAvailRestUrlAuth: Basic ZXNsc3ZjOlcwcmtncHB3MQ==
