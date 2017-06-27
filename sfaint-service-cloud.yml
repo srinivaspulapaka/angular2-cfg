@@ -40,3 +40,4 @@ sfaint:
     createOppurtunityurl: https://qxgsfa-e2e.foss.dev.qintra.com/qxgsfa/servicesSec/platformCtlCreateOppty
     creditcheckurl: https://qxgsfa-e2e.foss.dev.qintra.com/qxgsfa/servicesSec/platformCtlRequestCreditCheck
     customerlookupurl: https://qxgsfa-e2e.foss.dev.qintra.com/qxgsfa/servicesSec/platformCtlLookupCustomer
+    platformCreateOrderUrl: https://qxgsfa-e2e.foss.dev.qintra.com/qxgsfa/servicesSec/platformCtlCreateOrder
