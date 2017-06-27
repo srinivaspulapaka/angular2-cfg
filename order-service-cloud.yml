@@ -40,7 +40,7 @@ jwt:
     publicKey: apiclient@ctl.com
 
 order:
-    restUrl: https://cxg7i.test.intranet/e2e/PoimOrderFlow/PoimService/RestServiceforPortal/processPortalOrder
+    restUrl: https://cxg7i.test.intranet/e2e/PoimOrderFlow/PoimService/RestServiceforPortal/processPortalOrder
     authorization: Basic cGN0bDpPcmFuZ2VmZWF0aGVycyQk
 url:
     reserveOrderIdUrl: http://ordering-e2e.dev.qintra.com:80/OaWSLite/OaWSLite
